@@ -1,7 +1,7 @@
 
 var csvfile = "./data/main.csv";
 var url = "https://www.discogs.com/";
-var start = 1956;
+var start = 1955;
 var now = new Date();
 var end = now.getFullYear();
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
         }
         // album
         var insert = '';
-        var domain = (this[2].indexOf("http") != -1) ? "" : url;
+        var domain = (this[2] && this[2].indexOf("http") != -1) ? "" : url;
         insert += "<a href='" + domain + this[2] + "' target='_blank'>";
         insert += "<div class='target target"+counter+" in album' id='"+this[1]+"'></div></a>";
         $("#"+this[0]).append(insert);
