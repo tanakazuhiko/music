@@ -59,7 +59,7 @@ $(document).ready(function() {
 
     for(no = 1; no <= 10; no++) {
       ScrollReveal().reveal('.target'+no, {
-        delay: 500 * (no%10)
+        delay: 500 * no
       });
     };
   }
