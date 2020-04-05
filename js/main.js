@@ -52,8 +52,9 @@ $(document).ready(function() {
     });
 
     ScrollReveal().reveal('.in', {
-      duration: 1500,
+      duration: 1000,
       scale: 5,
+      opacity: 0
       // reset: true
     });
 
@@ -62,5 +63,11 @@ $(document).ready(function() {
         delay: 500 * no
       });
     };
+
+    // setTimeout(headline, 0);
+    // var headline = function(){
+    //   $(".headline").css({display: "block"});
+    // };
+
   }
 });

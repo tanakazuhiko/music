@@ -15,6 +15,7 @@ body::-webkit-scrollbar {
   height: 100vh;
   font-size: 6rem;
   line-height: 1;
+  /* display: none; */
 }
 
 .link {
@@ -30,6 +31,10 @@ a {
   color: white;
   font-size: 0.8rem;
   text-decoration: none;
+}
+
+a:hover  {
+  opacity: 0.6;
 }
 
 .page {
