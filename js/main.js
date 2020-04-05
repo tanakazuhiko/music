@@ -43,7 +43,11 @@ $(document).ready(function() {
         var insert = '';
         var domain = (this[2] && this[2].indexOf("http") != -1) ? "" : url;
         insert += "<a href='" + domain + this[2] + "' target='_blank'>";
-        insert += "<div class='target target"+counter+" in album' id='"+this[1]+"'></div></a>";
+        insert += "<div class='target target" + counter + " in album' id='" + this[1] + "' ";
+        insert += "data-year='" + this[0] + "'";
+        insert += "data-artist='" + this[3] + "'";
+        insert += "data-albun='" + this[4] + "'";
+        insert += "></div></a>";
         $("#"+this[0]).append(insert);
         // image
         var path = "./images/" + this[1] + ".jpg";
@@ -63,6 +67,11 @@ $(document).ready(function() {
         delay: 500 * no
       });
     };
+
+    // $(".target").on("mouseover",function(){
+    //   var year = $(this).data("year");
+    //   $("#" + year).append($(this).data("artist"));
+    // });
 
     // setTimeout(headline, 0);
     // var headline = function(){
