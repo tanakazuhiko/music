@@ -58,7 +58,7 @@ $(document).ready(function() {
       // reset: true
     });
 
-    for(no = 1; no <= 10; no++) {
+    for(no = 0; no <= 10; no++) {
       ScrollReveal().reveal('.target'+no, {
         delay: 500 * no
       });
