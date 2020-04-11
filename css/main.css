@@ -138,5 +138,6 @@ a:hover  {
   }
   .page span {
     width: 100%;
+    margin-top: 20px;
   }
 }
