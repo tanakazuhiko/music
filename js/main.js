@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   // year
   for(y = start; y <= end; y++) {
-    str = "<div class='page' id='"+y+"'>"+y+"</div>";
+    str = "<div class='page' id='"+y+"'><span>"+y+"<span></div>";
     $(".main_page").append(str);
     if(y % 5 == 0) {
       str = "<li><a href='#"+y+"'>"+y+"</a></li>";
@@ -44,9 +44,9 @@ $(document).ready(function() {
         var domain = (this[2] && this[2].indexOf("http") != -1) ? "" : url;
         insert += "<a href='" + domain + this[2] + "' target='_blank'>";
         insert += "<div class='target target" + counter + " in album' id='" + this[1] + "' ";
-        insert += "data-year='" + this[0] + "'";
-        insert += "data-artist='" + this[3] + "'";
-        insert += "data-albun='" + this[4] + "'";
+        // insert += "data-year='" + this[0] + "'";
+        // insert += "data-artist='" + this[3] + "'";
+        // insert += "data-albun='" + this[4] + "'";
         insert += "></div></a>";
         $("#"+this[0]).append(insert);
         // image

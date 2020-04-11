@@ -50,7 +50,6 @@ a:hover  {
 .target {
   position: absolute;
   top: 300px;
-  /* left: 100px; */
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 1.6rem;
@@ -108,4 +107,36 @@ a:hover  {
 
 .i {
   font-style: italic;
+}
+
+@media screen and (max-width: 500px) {
+  .headline{
+    font-size: 5rem;
+  }
+  .link {
+    display: none;
+  }
+  .page {
+    height: 150vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+  .page .target {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    position: relative;
+    top: auto;
+    left: auto;
+    min-width: 160px;
+    min-height: 160px;
+    max-width: 160px;
+    max-height: 160px;
+    margin: 0 10px 10px 0;
+  }
+  .page span {
+    width: 100%;
+  }
 }
