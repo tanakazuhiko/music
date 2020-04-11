@@ -54,29 +54,29 @@ $(document).ready(function() {
         $("#"+this[1]).css({backgroundImage : "url(" + path + ")"});
       }
     });
-
-    ScrollReveal().reveal('.in', {
-      duration: 1000,
-      scale: 5,
-      opacity: 0
-      // reset: true
-    });
-
-    for(no = 0; no <= 10; no++) {
-      ScrollReveal().reveal('.target'+no, {
-        delay: 500 * no
+    var ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+      ScrollReveal().reveal('.in', {
+        duration: 600,
+        scale: 5,
+        opacity: 0
       });
-    };
-
-    // $(".target").on("mouseover",function(){
-    //   var year = $(this).data("year");
-    //   $("#" + year).append($(this).data("artist"));
-    // });
-
-    // setTimeout(headline, 0);
-    // var headline = function(){
-    //   $(".headline").css({display: "block"});
-    // };
-
+      for(no = 0; no <= 10; no++) {
+        ScrollReveal().reveal('.target'+no, {
+          delay: 200 * no
+        });
+      };
+    } else {
+      ScrollReveal().reveal('.in', {
+        duration: 1000,
+        scale: 5,
+        opacity: 0
+      });
+      for(no = 0; no <= 10; no++) {
+        ScrollReveal().reveal('.target'+no, {
+          delay: 500 * no
+        });
+      };
+    }
   }
 });
