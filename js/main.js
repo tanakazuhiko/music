@@ -57,13 +57,13 @@ $(document).ready(function() {
     var ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
       ScrollReveal().reveal('.in', {
-        duration: 600,
+        duration: 800,
         scale: 5,
         opacity: 0
       });
       for(no = 0; no <= 10; no++) {
         ScrollReveal().reveal('.target'+no, {
-          delay: 200 * no
+          delay: 300 * no
         });
       };
     } else {
